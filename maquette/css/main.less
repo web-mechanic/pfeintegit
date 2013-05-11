@@ -1,0 +1,446 @@
+@lightGrey:#B1B1B1;
+@yellow: #f7a313;
+@blueHover:#2FA5E7;
+.vSpacing(){
+    padding-top: 1.5em;
+    clear:both;
+}
+@import "normalize";
+@import "typography";
+@import "grid";
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html{
+
+    background-color: white;
+}
+
+body{
+    font-size: 87.5%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+
+.secName, .hiddentitle{
+    display: none;
+}
+
+.header {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: #FFF;
+    height: 7em;
+    -webkit-box-shadow: 0px 1px 3px 0px #d5d5d8;
+    box-shadow: 0px 1px 3px 0px #d5d5d8;
+
+nav{
+    float: right;
+    margin-right: 1.25%;
+}
+
+li{
+    float: left;     
+
+    a{
+        margin-left: 1.53em;
+        padding: 0.57em 0.57em 0.2em 0.57em;
+        color: #000;
+        font-weight: 400;
+        border-bottom: none;
+        font-size: 1.25em;
+
+            &:hover{
+                    border-bottom:1px solid @yellow;
+            }
+        }
+    }
+}
+
+.tinynav { display: none }
+
+.logoSite {
+    float: left;
+    width: 250px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header ul{
+    margin-top: 1.9em;    
+}
+
+
+
+.slider{
+    padding: 1.5em 0;
+    clear: both;
+}
+
+.slider img{
+    clear: both;
+    display: block;
+}
+
+.slideBg{
+        background-image: url('../img/bg.jpg');
+    background-repeat: repeat;
+}
+
+.contentgb{
+    clear: both;
+    background: #FFF;
+    -webkit-box-shadow: 0px -1px 3px 0px #d5d5d8;
+    box-shadow: 0px -1px 3px 0px #d5d5d8;
+}
+
+.EventsContainer{
+    display: inline;
+    float: left;
+    width: 22.5%;
+    margin: 0 1.25%;   
+    height: 16em;
+   
+   p{
+        margin: 0 0 0.2em 0;
+    }
+}
+
+.EventsContainer img, .postSummary img{
+width: 100%;
+}
+.agenda {
+padding-top: 1.5em;
+
+h3{
+    color:@yellow;
+}
+}
+
+
+.agenda h1 {
+background-image: url('../img/calendarIco.png');
+background-repeat: no-repeat;
+padding-left: 1em;
+margin-top: 0em;
+} 
+
+
+.blogSummary h1{
+    background-image: url('../img/blogIco.png');
+    background-repeat: no-repeat;
+    padding-left: 1.3em;
+}
+
+.agenda h1, .agenda h2, .blogSummary h1{
+    .tm();
+}
+
+.EventsContainer p {
+text-align: center;
+font-weight: 400;
+background: rgba(238, 238, 238, 0.85);
+position: relative;
+top: -2.56em;
+height: 2em;
+padding-top: .5em;
+font-size: 1.2em;
+}
+
+.blogSummary {
+    clear: both;
+    padding-top: 1.4em;
+}
+
+.postSummary{
+    .column(4);
+
+    h3{
+    color:@yellow;
+}
+}
+
+.chapoSummary {
+    position: relative;
+    top: -6.7em;
+    padding: 1em;
+    background: rgba(238, 238, 238, 0.85);
+}
+
+.newsLetter {
+width: auto;
+text-align: center;
+height: 11em;
+clear: both;
+display: block;
+padding: 3.5em 0;
+
+    input[type="text"], input[type="email"]{
+        width: 38%;
+        display: inline;
+        float: left;
+        margin: 0 1.25%;
+        height: 2.6em;
+    }
+    input[type="submit"]{
+         width: 14%;
+        height: 2.4em;
+        background: #F7A313;
+        border: none;
+        font-size: 1.2em;
+        color: #FFF;
+
+    }
+    input[type="submit"]:hover {
+        background: @blueHover;
+        cursor: pointer;
+    }
+
+    p{
+        margin: 0 0 1.4em 0;
+    }
+}
+
+.footer {
+    clear: both;
+    padding-top: 1.4em;
+    background: #E9E9E9;
+    height: 20em;
+    border-top: @yellow 1px solid;
+
+    section{
+        display: inline;
+        float: left;
+        width: 22.5%;
+        margin: 0 1.25%;
+    }
+
+    p{
+        clear: both;
+    }
+}
+
+.copyR{
+    text-align: center;
+}
+
+.signature{
+    text-align: center;
+}
+
+.apropos{
+    clear:both;
+}
+
+.navAPropos {
+margin-top: 1.8em;
+}
+
+.sbLeft{
+display: inline;
+float: left;
+width: 22.5%;
+margin: 0 1.25%;
+position: fixed;
+}
+
+.sbRight{
+display: inline;
+float: right;
+width: 72.5%;
+margin: 0 1.25%;
+}
+
+.dirMusicale img{
+    float: left;
+    margin-right: 1.25%;
+}
+
+.gradeAdmin{
+    display: inline;
+    float: left;
+    width: 30.833333333333335%;
+    margin-right: 2.50%;
+}
+
+#comitedadmin img {
+width: 100%;
+height: auto;
+}
+
+.lesMusiciens{
+    clear:both;
+}
+
+.media{
+    clear:both; 
+}
+
+#audio li{
+    background: grey;
+    margin: 1em 0 1em 0;
+    height: 5em;
+}
+
+#photo{
+    .row(9);
+    
+    li{
+        .column(3,9);
+        margin-bottom: 2em;
+    }
+}
+
+
+
+.infoSupEvenement{
+    .column(3);
+}
+
+table{
+        width: 100%;
+    }
+
+
+.enrolUs{
+    .column(6);
+}
+
+.whatSee{
+    .column(6);
+}
+-
+
+.toTop{
+    width: 115px;
+    background: #F7A313;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    color: #FFF;
+    font-size: 14px;
+    padding: 1px 2px;
+
+        &:hover{
+            background: @blueHover;
+        }
+}
+
+.overview , .dirMusicale{
+    margin-bottom: 2.5em;
+}
+
+.overview img {
+    margin-bottom: 1em;
+    width: 100%;
+    height: auto;
+}
+
+.overview h2{
+    background-image: url('../img/overviewIco.png');
+    background-repeat: no-repeat;
+    padding-left: 1.6em;
+    margin-top: 1.4em;
+}
+
+.gradeAdmin h3{
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+.dirMusicale h2{
+    background-image: url('../img/dirIco.png');
+background-repeat: no-repeat;
+padding-left: 1.6em;
+margin-top: 1.4em;
+}
+
+.comiteAdmin h2{
+    background-image: url('../img/mComiteIco.png');
+    background-repeat: no-repeat;
+    padding-left: 1.6em;
+    margin-top: 1.4em;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@import "media";
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,77 @@
+h1 {
+  font-size: 2.55em;
+  margin: .67em 0 .5em;
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+}
+.footer h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 2.2em;
+  margin: 0.5em 0 0.83em 0;
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  color: #f7a313;
+}
+h3 {
+  font-size: 1.5em;
+  margin: .5em 0;
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 700;
+}
+h4 {
+  font-size: 1.25em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+p {
+  font-size: 1.15em;
+  line-height: 1.6em;
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 300;
+}
+th {
+  text-align: left;
+  font-size: 1.3em;
+}
+td {
+  font-size: 1.15em;
+  line-height: 1.6em;
+  font-family: 'source-sans-pro', sans-serif;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  font-size: 1.15em;
+  color: black;
+  font-family: 'source-sans-pro', sans-serif;
+  font-weight: 300;
+  line-height: 2.8em;
+}
+span {
+  text-decoration: none;
+  font-size: 1.15em;
+  line-height: 1.4em;
+  font-family: 'source-sans-pro', sans-serif;
+}
+.itText {
+  font-family: 'georgia', 'Droid Serif', serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #b1b1b1;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,30 @@
+<?php
+
+
+function simplehtmldom_parser_ctools_plugin_api($owner, $api) {
+  if ($owner == 'feeds' && $api == 'plugins') {
+    return array('version' => 1);
+  }
+}
+
+function simplehtmldom_parser_enable() {
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}
+
+function simplehtmldom_parser_feeds_plugins() {
+  $path = drupal_get_path('module', 'simplehtmldom_parser');
+  $info = array();
+  $info['FeedsSimpleHTMLDOMParser'] = array(
+    'name' => 'SimpleHTMLDOM parser',
+    'description' => 'Parse data from HTML DOM.',
+    'handler' => array(
+      'parent' => 'FeedsParser',
+      'class' => 'FeedsSimpleHTMLDOMParser',
+      'file' => 'FeedsSimpleHTMLDOMParser.inc',
+      'path' => $path,
+    ),
+  );
+  return $info;
+}
+
+

@@ -1,0 +1,16 @@
+name = SimpleHTMLDOM Parser
+description = Feeds parser for extracting content from HTML DOM objects
+package = Feeds
+core = 7.x
+dependencies[] = feeds
+
+files[] = simplehtmldom_parser.module
+files[] = FeedsSimpleHTMLDOMParser.inc
+
+
+; Information added by drupal.org packaging script on 2011-08-17
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "simplehtmldom_parser"
+datestamp = "1313583722"
+
