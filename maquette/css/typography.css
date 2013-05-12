@@ -1,71 +1,59 @@
 h1 {
-  font-size: 2.55em;
+  font: 400 2.55em/1.4em "league-gothic", sans-serif;
   margin: .67em 0 .5em;
-  font-family: "league-gothic", sans-serif;
-  font-weight: 400;
 }
 .footer h1 {
   font-size: 1.8em;
 }
 h2 {
-  font-size: 2.2em;
-  margin: 0.5em 0 0.83em 0;
-  font-family: "league-gothic", sans-serif;
-  font-weight: 400;
+  font: 400 2.2em/1.4em "league-gothic", sans-serif;
+  margin: .5em 0 .83em 0;
   color: #f7a313;
 }
 h3 {
-  font-size: 1.5em;
+  font: 700 1.45em/1.4em "source-sans-pro", sans-serif;
   margin: .5em 0;
-  font-family: "source-sans-pro", sans-serif;
-  font-weight: 700;
 }
 h4 {
   font-size: 1.25em;
   margin: 1.33em 0;
 }
 h5 {
-  font-size: 0.83em;
+  font-size: .83em;
   margin: 1.67em 0;
 }
 h6 {
-  font-size: 0.67em;
+  font-size: .67em;
   margin: 2.33em 0;
 }
 p {
-  font-size: 1.15em;
-  line-height: 1.6em;
-  font-family: "source-sans-pro", sans-serif;
-  font-weight: 300;
-}
-th {
-  text-align: left;
-  font-size: 1.3em;
+  font: 300 1.15em/1.4em "source-sans-pro", sans-serif;
 }
 td {
-  font-size: 1.15em;
-  line-height: 1.6em;
-  font-family: 'source-sans-pro', sans-serif;
-  font-weight: 300;
+  font: 300 1.15em/1.6em "source-sans-pro", sans-serif;
+  height: 2.8em;
+  vertical-align: middle;
+  padding: 0 .4em;
+}
+th {
+  font: 400 1.8em/1.4em "league-gothic", sans-serif;
+  text-align: left;
+  height: 1.8em;
+  background-color: #181818;
+  color: white;
+  padding: 0 .4em;
 }
 a {
+  font: 300 1.15em/1.4em "source-sans-pro", sans-serif;
   text-decoration: none;
-  font-size: 1.15em;
   color: black;
-  font-family: 'source-sans-pro', sans-serif;
-  font-weight: 300;
-  line-height: 2.8em;
 }
 span {
+  font: 300 1.15em/1.4em "source-sans-pro", sans-serif;
   text-decoration: none;
-  font-size: 1.15em;
-  line-height: 1.4em;
-  font-family: 'source-sans-pro', sans-serif;
 }
 .itText {
-  font-family: 'georgia', 'Droid Serif', serif;
-  font-weight: 400;
-  font-style: italic;
+  font: 400 italic "georgia','Droid Serif", serif;
   color: #b1b1b1;
 }
 li {
