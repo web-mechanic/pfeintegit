@@ -4,10 +4,18 @@ h1 {
 }
 .footer h1 {
   font-size: 1.8em;
+  margin-top: 0;
 }
 h2 {
   font: 400 2.2em/1.4em "league-gothic", sans-serif;
   margin: .5em 0 .83em 0;
+  color: #f7a313;
+}
+article h2 {
+  margin: 1.5em 0 0 0;
+}
+.artTitle {
+  font: 400 1em/1.4em "league-gothic", sans-serif;
   color: #f7a313;
 }
 h3 {
@@ -26,8 +34,12 @@ h6 {
   font-size: .67em;
   margin: 2.33em 0;
 }
-p {
+p,
+textarea,
+label,
+span {
   font: 300 1.15em/1.4em "source-sans-pro", sans-serif;
+  margin-bottom: .7em;
 }
 td {
   font: 300 1.15em/1.6em "source-sans-pro", sans-serif;
@@ -47,10 +59,6 @@ a {
   font: 300 1.15em/1.4em "source-sans-pro", sans-serif;
   text-decoration: none;
   color: black;
-}
-span {
-  font: 300 1.15em/1.4em "source-sans-pro", sans-serif;
-  text-decoration: none;
 }
 .itText {
   font: 400 italic "georgia','Droid Serif", serif;
