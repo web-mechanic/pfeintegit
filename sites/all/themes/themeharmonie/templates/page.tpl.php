@@ -72,7 +72,7 @@
 <header class="header" role="banner">
   <div class="wrap">
      <h1 class="logoSite"><?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" width="270" height="97"/></a>
         <?php endif; ?>
       </h1>
 
@@ -101,8 +101,13 @@
     <?php print render($page['header']); ?>
 
   </header>
+<?php if($is_front):?>
+  <div class="slideBg">
+    <?php print render($page['content']['views_slider_acc-block']);?>
+  </div>
+<?php endif;?>
 
-  <div id="main">
+  <div class="wrap">
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
@@ -110,12 +115,12 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="title" id="page-title"><?php print $title; ?></h1>
+<!--         <h1 class="title" id="page-title"><?php print $title; ?></h1> -->
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
+<!--       <?php print render($page['help']); ?> -->
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>

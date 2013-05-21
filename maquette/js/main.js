@@ -70,3 +70,73 @@ $(document).ready(function () {
 
     });
 });
+
+$(document).ready(function () {
+
+ var locations = [
+      ['Local de répétition', 50.544655,5.2272]
+    ];
+
+      // Create an array of styles.
+  var styles = [
+    {
+      stylers: [
+        { hue: "#519fc4" },
+        { saturation: -20 }
+      ]
+    },{
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        { lightness: 100 },
+        { visibility: "simplified" }
+      ]
+    },{
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+  ];
+
+  // Create a new StyledMapType object, passing it the array of styles,
+  // as well as the name to be displayed on the map type control.
+ var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+
+  // Create a map object, and include the MapTypeId to add
+  // to the map type control.
+  var mapOptions = {
+    zoom: 9,
+    scrollwheel: false,
+    center: new google.maps.LatLng(50.651202,5.634613),
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    }
+  };
+  var map = new google.maps.Map(document.getElementById('Map'),
+    mapOptions);
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+
+       map.mapTypes.set('map_style', styledMap);
+       map.setMapTypeId('map_style');
+    }
+
+});

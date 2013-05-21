@@ -95,12 +95,7 @@ if(isset($_POST['submit'])) {
     <div class="wrapForm">
     <div class="iContact">
         <h2>Via le formulaire de contact</h2>
-        
-        <p>Si vous souhaitez nous contacter directement, nous vous encourageons à employer le formulaire de contact de cette page</p>
-
-        <p>Notre équipe mettra tout en oeuvre afin de vous répondre dans les plus brefs délais.</p>
-
-        <p>Nous avons mis à votre disposition une google map qui vous permettra de trouver notre local de répétition en toute facilité.</p>
+        <p>Envie de nous rejoindre? D'avoir des informations sur la société ou bien tout simplement l'envie de nous dire bonjour? N'hésitez pas à utiliser notre formulaire de contact!</p>
     </div>
 
 
@@ -139,37 +134,62 @@ if(isset($_POST['submit'])) {
                                 
             <p class="requiredNote"><em>*</em>Indique un champ requis</p>
             
-            <input type="submit" value="Send Message" name="submit" id="submitButton" title="Click here to submit your message!" />
+            <input type="submit" value="Envoyer le message" name="submit" id="submitButton" title="Cliquez ici pour envoyer votre message!" />
         </form>
         
     </div>
     </div>
     <div class="otherContactInf">
        <div class="adressAdmin">
-            <h2>Contacter l'administration</h2>
-           <p>  
+            <h2>Contacter le secrétariat</h2>
+           <p class="contAdress">  
                 Thomas Lissens<br/>
                 5, rue Basses-Trixhes <br/>
                 4218 Couthuin<br/>
            </p>
 
-           <p>
+           <p class="contTel">
                0472 41 55 89
            </p>
 
-           <p>
+           <p class="contMail">
                admin@harmonie-antheit.be
            </p>
 
+            <h2>Contacter le chef de musique</h2>
+           <p class="contAdress">  
+                Jean-Marc Lissens<br/>
+                5, rue Basses-Trixhes <br/>
+                4218 Couthuin<br/>
+           </p>
+
+           <p class="contTel">
+               0479 88 32 01
+           </p>
+
+           <p class="contMail">
+               direction@harmonie-antheit.be
+           </p>
+
            <h2>Adresse du local</h2>
-           <p>
-               
+           <p class="contAdress">
+                Harmonie d'Antheit</br>
+                Rue des Grandes Ruelles 40</br>
+                4520 Antheit</br>
 
            </p>
        </div>
     </div>
 
-</section>    
+
+
+</section>   
+<div class="loc">
+    <h1>Nous localiser</h1>
+<div id="Map">
+    
+</div> 
+</div>
 </div>
 <div class="footer">
     <div class="wrap">
@@ -184,13 +204,21 @@ if(isset($_POST['submit'])) {
         </ul>
     </section>
 
-    <section class="contactFoot">
+     <section class="contactFoot">
         <h1>Nous contacter</h1>
-        <p class="nameAssoc">Harmonie d'Antheit</p>
-        <p class="streetAssoc">40, rue des grandes ruelles</p>
-        <p class="cpVilleAssoc">4520 Wanze</p>
-        <p class="emailAssoc">harmonieantheit@skynet.be</p>
-        <p class="telAssoc">+32 (0)472 41 55 89</p>
+           <p class="contAdress">
+                Harmonie d'Antheit</br>
+                Rue des Grandes Ruelles 40</br>
+                4520 Antheit</br>
+
+           </p>
+            <p class="contTel">
+               0472 41 55 89
+           </p>
+           <p class="contMail">
+               admin@harmonie-antheit.be
+           </p>
+           
     </section>
 
     <section class="autresInfos">
@@ -215,10 +243,11 @@ if(isset($_POST['submit'])) {
 
    
 <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="../js/tinynav.min.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="//maps.google.com/maps/api/js?sensor=false"></script>
 <script src="../js/main.js"></script>
-<script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="../js/tinynav.min.js"></script>
+
      </body>
 
 

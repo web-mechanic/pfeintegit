@@ -112,29 +112,29 @@ border-bottom: 1px solid @yellow;
 .agenda {
     padding-top: 1.5em;
 
-    h3{
+    h4{
         color:@yellow;
     }
 }
 
 
-.agenda h1 {
+.agenda h2 {
     background: url('../img/calendarIco.png') no-repeat 0 9px;
     padding-left: 1em;
     margin-top: 0em;
 } 
 
 
-.blogSummary h1,.blogPage h1{
+.blogSummary h2,.blogPage h2{
     background: url('../img/blogIco.png') no-repeat 0 10px;
     padding-left: 1.3em;
 }
 
-.agenda h1, .agenda h2, .blogSummary h1{
+.agenda h2, .agenda h3, .blogSummary h2{
     .tm();
 }
 
-.agenda h1, .blogSummary h1{
+.agenda h2, .blogSummary h2{
     margin-bottom: 0;
 }
 
@@ -230,7 +230,7 @@ border-bottom: 1px solid @yellow;
     clear: both;
     padding-top: 1.4em;
     background: #E9E9E9;
-    height: 12.5em;
+    height: 14.5em;
     border-top: @yellow 1px solid;
     margin-top: 2.8em;
 
@@ -252,6 +252,7 @@ border-bottom: 1px solid @yellow;
 
 .signature {
 padding: 1.4em 0 .4em 0;
+font-size: 0.8em;
 }
 
 .apropos{
@@ -268,6 +269,7 @@ padding: 1.4em 0 .4em 0;
     width: 22.5%;
     margin: 0 1.25%;
     position: fixed;
+    margin-top: -.5em;
 }
 
 .sbRight{
@@ -287,6 +289,7 @@ padding: 1.4em 0 .4em 0;
     float: left;
     width: 30.833333333333335%;
     margin: 0 2.5% 2em 0;
+    height: 15em;
 }
 
 .gradeAdmin p {
@@ -324,6 +327,12 @@ display: block;
 
 .lesMusiciens{
     clear:both;
+}
+
+.half{
+    float: left;
+    width: 50%;
+    vertical-align: top;
 }
 
 .media{
@@ -385,24 +394,29 @@ table{
     height: auto;
 }
 
-.overview h2{
+.overview h3{
     background: url('../img/overviewIco.png') no-repeat 0;
     padding-left: 1.6em;
     margin-top: .9em;
 }
 
-.gradeAdmin h3{
+.gradeAdmin h4{
     margin-top: 0;
     margin-bottom: .5em;
 }
 
-.dirMusicale h2{
+.dirMusicale h3{
     background: url('../img/dirIco.png') no-repeat 0;
     padding-left: 1.6em;
     margin-top: 1.4em;
 }
 
-.comiteAdmin h2{
+#Map {
+width: 100%;
+height: 22em;
+}
+
+.comiteAdmin h3{
     background: url('../img/mComiteIco.png') no-repeat 0;
     padding-left: 1.6em;
     margin-top: 1.4em;
@@ -437,21 +451,21 @@ tr{
     background: #F0F0F0;
 }
 
-.blogDroit{
+.blogDroite{
     display: inline;
     float: left;
-    width: 30.833333333333335%;
-    margin: 0 1.25%;
-    margin-top: -.4em;
+    width: 31.63%;
+    margin: -1em 0 0 1.7%;
+    .blogDroite h3:first-child {
+        margin-top: 0.55em;
+    }
 }
 
 .blogGauche{
-
     display: inline;
     float: left;
     width: 64.16666666666667%;
-    margin: 0 1.25%;
-    margin-top: -3.7em;
+    margin: 0 2.5% 0 0;
 }
 
 .postmetadata {
@@ -462,7 +476,20 @@ tr{
 display: inline-block;
 font: 600 1.15em/1.4em "source-sans-pro",sans-serif;
 margin-right: 4.2em;
-padding-left: 1.4em;
+padding-left: 1.2em;
+
+}
+
+.tags{
+    background: url('../img/tagIco.png') no-repeat 0 4px;
+}
+
+.date{
+  background: url('../img/datePubIco.png') no-repeat 0 2px;  
+}
+
+.comments{
+  background: url('../img/commIco.png') no-repeat 0 4px;  
 }
 
 .rMore {
@@ -480,16 +507,26 @@ article{
     clear: both;
 }
 
-.contact h1{
+.contact h2{
     background: url('../img/contactIco.png') no-repeat 0;
-    padding-left: 1.2em;
+    padding-left: .9em;
     margin-top: 1.4em;
 }
 
 /***** Contact Form Elements *****/
 
 .wrapForm{
-    .column(9);
+    display: inline;
+    float: left;
+    width: 65.9%;
+    margin: 0 1.25% 0 0;
+}
+
+.otherContactInf{
+    display: inline;
+    float: left;
+    width: 29.68%;
+    margin: -1em 0 0 2.9%;
 }
 
 .topForm{
@@ -504,7 +541,7 @@ article{
 #subject, #message{
     width: 96%;
 }
-#contactWrapper h1 {  
+#contactWrapper h2 {  
     margin: -33px 0px 30px; 
     padding: 5px 0px 0px 15px;   
     background: url(../img/title-background.png) no-repeat; 
@@ -570,7 +607,7 @@ article{
  }
 
 #contactform input, form#contactform textarea {
-    border: 1px solid #CFDEDE;
+    border: 1px solid #DDD;
     padding: 8px 0px 8px 8px;
     color: #333;
     border-radius: 3px;
@@ -581,11 +618,12 @@ article{
 
 #contactform textarea {
     padding: 12px;
+    max-width: 740px;
 }
 
 #contactform input:focus, form#contactform textarea:focus { 
     outline: none; 
-    border: 1px solid #649d9d;
+    border: 1px solid @blueHover;
 }
 
 #submitButton[type=submit] {
@@ -601,11 +639,44 @@ article{
     &:hover{
         background: @blueHover;
     }
+    &:focus{
+        border: 1px solid @lightGrey;
+    }
+}
+
+.requiredNote{
+    margin-top: 0;
 }
 
 .iContact {
 margin-top: -1em;
 }
+
+.contAdress{
+    background: url('../img/adressIco.png') no-repeat 0 1px;
+    padding-left: 1.4em;
+}
+
+.contMail{
+background: url('../img/mailIco.png') no-repeat 0 1px;
+padding-left: 1.4em;
+}
+
+.contTel{
+background: url('../img/telIco.png') no-repeat 0 1px;
+padding-left: 1.4em;
+}
+
+.loc{
+    clear:both;
+    width: 100%;
+
+    h2{
+        background: url('../img/locIco.png') no-repeat 0 12px;
+        padding-left: 0.9em;
+    }
+}
+
 
 /* ==========================================================================
    Media Queries
