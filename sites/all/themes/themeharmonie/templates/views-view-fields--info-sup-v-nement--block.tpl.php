@@ -24,10 +24,10 @@
  * @ingroup views_templates
  */
 ?>
-	<li>
-		<?php print ($fields['field_photo_mus']->content); ?>
-		<p class="nomMusicienFiche"><?php print render ($row->node_title); ?></p>
-		<p class="pupitreMusicienFiche"><span><?php print ($fields['field_instrument_pratique']->content); ?></span> <?php print ($fields['field_pupitre']->content); ?></p>
-		
 
-	</li>
+ <h2 class="titreEvenement hiddentitle">A propos</h2>
+      
+    <div class="enrolUs">
+        <h3><?php print render ($row->node_title); ?></h3>
+        <p><?php print ($fields['field_texte_d_accroche']->content); ?></p>
+    </div>

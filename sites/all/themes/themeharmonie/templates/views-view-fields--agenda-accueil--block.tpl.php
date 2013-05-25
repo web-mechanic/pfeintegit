@@ -26,9 +26,9 @@
 ?>
  <div class="EventsContainer">
         <a href="html/eventsPDetail.html">
-        <h3><?php print render ($row->node_title); ?></h3>
-        <?php print render ($row->field_field_photo_evenement);?>
+        <h3><?php print ($fields['title']->content); ?></h3>
+        <?php print ($fields['field_photo_evenement']->content);?>
 
-        <p class="dethEvents"> <?php print render ($row->field_field_date_evenement);?></p>
+        <p class="dethEvents"> <?php print render($row->field_field_date_evenement);?></p>
         </a>
     </div>

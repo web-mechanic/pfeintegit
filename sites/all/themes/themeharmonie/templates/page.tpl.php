@@ -99,7 +99,7 @@
    
 
     <?php print render($page['header']); ?>
-
+</div>
   </header>
 <?php if($is_front):?>
   <div class="slideBg">

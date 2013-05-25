@@ -24,10 +24,16 @@
  * @ingroup views_templates
  */
 ?>
-	<li>
-		<?php print ($fields['field_photo_mus']->content); ?>
-		<p class="nomMusicienFiche"><?php print render ($row->node_title); ?></p>
-		<p class="pupitreMusicienFiche"><span><?php print ($fields['field_instrument_pratique']->content); ?></span> <?php print ($fields['field_pupitre']->content); ?></p>
-		
-
-	</li>
+<li>
+	<article>
+	 <h3 class="artTitle"><?php print ($fields['title']->raw); ?></h3>
+		<ul class="postmetadata clearfix">   
+			<li class="date"><?php print ($fields['created']->content); ?></li>
+			<li class="tags"><?php print ($fields['field_tags']->content); ?></li>            
+		</ul>
+		<?php print ($fields['field_image']->content); ?>
+		<div class="artContent">
+			<p><?php print ($fields['body']->content); ?></p>
+		</div>
+	</article>
+</li>
