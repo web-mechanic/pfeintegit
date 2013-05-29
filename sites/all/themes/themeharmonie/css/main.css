@@ -475,6 +475,7 @@ body {
   float: left;
   width: 30.833333333333335%;
   margin: 0 2.5% 2em 0;
+  height: 15em;
 }
 .gradeAdmin p {
   font: 400 1.2em;
@@ -691,10 +692,10 @@ article {
   width: 50%;
 }
 #contactname,
-#email {
+#edit-submitted-e-mail {
   width: 92%;
 }
-#subject,
+#edit-submitted-sujet,
 #message {
   width: 96%;
 }
@@ -773,7 +774,7 @@ form#contactform textarea:focus {
   outline: none;
   border: 1px solid #2fa5e7;
 }
-#submitButton[type=submit] {
+#edit-submit[type=submit] {
   display: block;
   width: 97%;
   height: 2.5em;
@@ -783,11 +784,17 @@ form#contactform textarea:focus {
   border: none;
   cursor: pointer;
 }
-#submitButton[type=submit]:hover {
+#edit-submit[type=submit]:hover {
   background: #2fa5e7;
 }
-#submitButton[type=submit]:focus {
+#edit-submit[type=submit]:focus {
   border: 1px solid #b1b1b1;
+}
+.resizable-textarea .grippie {
+  display: none;
+}
+#edit-submitted-nom {
+  width: 94%;
 }
 .requiredNote {
   margin-top: 0;

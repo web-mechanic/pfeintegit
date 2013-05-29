@@ -248,3 +248,31 @@ function THEMENAME_menu_link(array $variables) {
   
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+
+
+function themeharmonie_preprocess_webform_form(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'webform') . '/css/webform.css');
+  drupal_add_js(drupal_get_path('module', 'webform') . '/js/webform.js');
+  
+  $vars['form']['submitted']['nom']['#prefix'] = '<div class="stage clear topForm">';
+  $vars['form']['submitted']['nom']['#suffix'] = '</div>';
+  $vars['form']['submitted']['e_mail']['#prefix'] = '<div class="stage clear topForm">';
+  $vars['form']['submitted']['e_mail']['#suffix'] = '</div>';
+
+  if (isset($vars['form']['details']['nid']['#value'])) {
+    $vars['nid'] = $vars['form']['details']['nid']['#value'];
+  }
+  elseif (isset($vars['form']['submission']['#value'])) {
+    $vars['nid'] = $vars['form']['submission']['#value']->nid;
+  }
+}
+
+
+function hook_preprocess_page(&$vars) {
+  drupal_add_js('//maps.google.com/maps/api/js?sensor=false', 'external');
+  drupal_add_js('//maps.google.com/maps/api/js?sensor=false', array('type' => 'external'));
+}
+
+
+

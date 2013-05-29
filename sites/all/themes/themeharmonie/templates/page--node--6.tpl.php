@@ -69,6 +69,7 @@
  * @see template_process()
  */
 ?>
+
 <header class="header" role="banner">
   <div class="wrap">
      <h1 class="logoSite"><?php if ($logo): ?>
@@ -108,7 +109,7 @@
 <?php endif;?>
 
   <div class="wrap">
-    <section class="apropos">
+
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
@@ -124,6 +125,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+
       <?php print $feed_icons; ?>
     </div><!-- /#content -->
 
@@ -148,6 +150,36 @@
       <?php print render($page['navigation']); ?>
 
     </div><!-- /#navigation -->
+    <section class="contact">
+    <h2>Nous contacter</h2>
+    <div class="wrapForm">
+    <div class="iContact">
+        <?php print render ($page['content']['views_accroche_contact-block']);?>
+      </div>
+  <div id="contactform">
+       <?php print render ($page['content']['views_contactformview-block']);?>
+       </div>
+      </div>
+
+    
+
+    
+
+
+      <div class="otherContactInf">
+      <div class="adressAdmin">
+    <?php print render ($page['content']['views_bloc_adresse_contact-block']);?>
+
+
+    </div>
+    </div>
+<div class="loc">
+    <h2>Nous localiser</h2>
+<div id="Map">
+    
+</div> 
+</div>
+    </section>
 
     <?php
       // Render the sidebars to see if there's anything in them.
@@ -155,62 +187,13 @@
       $sidebar_second = render($page['sidebar_second']);
     ?>
 
-    <div class="sbLeft">
-      <?php print render ($page['content']['om_maximenu_om-maximenu-1']);?>
-    </div>
-
-    <div class="sbRight">
-      <?php print render ($page['content']['views_vue_ensemble-block']);?>
-      <?php print render ($page['content']['views_direction_musicale-block']);?>
-      <?php print render ($page['content']['views_membre_du_comite-block']);?>
-    <section class="lesMusiciens" id="musiciens">
-      <div class="musPart">
-            <h2>Les musiciens</h2>
-      <div class="half">
-        <ul>
-        <?php print render ($page['content']['views_flute-block']);?>
-        </ul>
-        <ul>
-        <?php print render ($page['content']['views_clarinette-block']);?>
-        </ul>
-        <ul>
-        <?php print render ($page['content']['views_saxophone-block']);?>
-        </ul>
-      </div>
-
-      <div class="half">
-
-        <ul>
-        <?php print render ($page['content']['views_trompette-block']);?>
-        </ul>
-        <ul>
-        <?php print render ($page['content']['views_trombonne-block']);?>
-        </ul>
-        <ul>
-        <?php print render ($page['content']['views_tuba_euphonium-block']);?>
-        </ul>
-        <ul>
-        <?php print render ($page['content']['views_violoncelle-block']);?>
-        </ul>
-        <ul>
-        <?php print render ($page['content']['views_synth_-block']);?>
-        </ul>
-        <ul>
-        <?php print render ($page['content']['views_percussion-block']);?>
-        </ul>
-      </div>
-    </div>
-    </section>
-
-    </div>
-
     <?php if ($sidebar_first || $sidebar_second): ?>
       <aside class="sidebars">
         <?php print $sidebar_first; ?>
         <?php print $sidebar_second; ?>
       </aside><!-- /.sidebars -->
     <?php endif; ?>
-</section>
+
   </div><!-- /#main -->
 
   <?php print render($page['footer']); ?>
@@ -218,5 +201,4 @@
 </div><!-- /#page -->
 
 <?php print render($page['bottom']); ?>
-
-
+<script src="//maps.google.com/maps/api/js?sensor=false"></script>

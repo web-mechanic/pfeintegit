@@ -79,7 +79,9 @@ stylesheets[all][] = css/main.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = js/jquery.min.js
+scripts[] = js/tinynav.min.js
+scripts[] = js/main.js
 
 
 
