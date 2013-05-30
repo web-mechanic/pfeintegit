@@ -108,7 +108,7 @@
 <?php endif;?>
 
   <div class="wrap">
-    <section class="apropos">
+
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
@@ -124,6 +124,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div><!-- /#content -->
 
@@ -149,28 +150,32 @@
 
     </div><!-- /#navigation -->
 
-<div class="wrap blogPage">
-  <h1>News</h1>
-    <div class="blogGauche">
-      <ul>
-        
-          <?php print render ($page['content']['views_blog-block']);?>
-        </li>
-      </ul>
+    <div class="sbLeft">
+      <h1>Média</h1>
+
     </div>
 
-     <div class="blogDroite">
-        <h2>Rechercher dans les news</h2>
-        <?php print render ($page['content']['search_form']);?>
-        
+     <div class="sbRight">
+
+    <section id="audio">
+        <h3>Audio</h3>
+         <?php print render ($page['content']['views_audio-block']);?>
+    </section>
+
+    <section id="photo">
+        <h3>Photo</h3>
+
+    </section>
+
+
+
     </div>
+
     <?php
       // Render the sidebars to see if there's anything in them.
       $sidebar_first  = render($page['sidebar_first']);
       $sidebar_second = render($page['sidebar_second']);
     ?>
-
-
 
     <?php if ($sidebar_first || $sidebar_second): ?>
       <aside class="sidebars">
@@ -178,7 +183,7 @@
         <?php print $sidebar_second; ?>
       </aside><!-- /.sidebars -->
     <?php endif; ?>
-</section>
+
   </div><!-- /#main -->
 
   <?php print render($page['footer']); ?>

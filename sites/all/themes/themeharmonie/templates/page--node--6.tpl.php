@@ -87,7 +87,7 @@
           print theme('links__system_main_menu', array(
             'links' => $main_menu,
             'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
+              'class' => array('links', 'inline', 'clearfix','mainNav'),
             ),
             'heading' => array(
               'text' => t('Main menu'),
@@ -136,7 +136,7 @@
         <?php print theme('links__system_secondary_menu', array(
           'links' => $secondary_menu,
           'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
+            'class' => array('links', 'inline', 'clearfix','mainNav'),
           ),
           'heading' => array(
             'text' => $secondary_menu_heading,

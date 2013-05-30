@@ -47,15 +47,8 @@
  * @see zen_process_block()
  */
 ?>
- <section class="contactFoot">
-        <h2>Nous contacter</h2>
- 
-
-
-
 
 
   <?php print $content; ?>
 
 
- </section><!-- /.block -->

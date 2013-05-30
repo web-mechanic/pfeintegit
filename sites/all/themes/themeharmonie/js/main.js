@@ -2,9 +2,9 @@ jQuery(document).ready(function($) {
 
 //scroll vers le haut
 
-/*$(document).ready(function () {
+$(document).ready(function () {
     $(".mainNav").tinyNav();
-});*/
+});
 
 
 $(function () {
@@ -23,6 +23,17 @@ $(function () {
     });
 });
 
+$(function () {
+    $('input[type="text"]').each(function() { 
+        var $this = $(this); 
+        $this.attr("placeholder", $this.attr("value")).removeAttr("value"); 
+    });
+
+        $('input[type="email"]').each(function() { 
+        var $this = $(this); 
+        $this.attr("placeholder", $this.attr("value")).removeAttr("value"); 
+    });
+});
 /*//Validation du formulaire
 
 $(document).ready(function () {
