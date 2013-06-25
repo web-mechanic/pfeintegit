@@ -1,3 +1,12 @@
+
+  (function() {
+    var config = {
+      kitId: 'lqz6sck',
+      scriptTimeout: 3000
+    };
+    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+  })();
+
 jQuery(document).ready(function($) {
 
 //scroll vers le haut
@@ -5,6 +14,7 @@ jQuery(document).ready(function($) {
 $(document).ready(function () {
     $(".mainNav").tinyNav();
 });
+
 
 
 $(function () {
@@ -24,53 +34,88 @@ $(function () {
 });
 
 $(function () {
-    $('input[type="text"]').each(function() { 
+    $('#contactform input[type="text"]').each(function() { 
         var $this = $(this); 
         $this.attr("placeholder", $this.attr("value")).removeAttr("value"); 
     });
 
-        $('input[type="email"]').each(function() { 
+        $('#contactform input[type="email"]').each(function() { 
         var $this = $(this); 
         $this.attr("placeholder", $this.attr("value")).removeAttr("value"); 
     });
 });
-/*//Validation du formulaire
 
-$(document).ready(function () {
+$(function () {
+
+$('.listImage li a').attr('class', 'fancybox')
+
+$('.fancybox').fancybox();
+
+});
+
+  $(function() {
+    $(".slider").responsiveSlides();
+
+    $(".slider").responsiveSlides({
+  auto: false,             // Boolean: Animate automatically, true or false
+  speed: 700,            // Integer: Speed of the transition, in milliseconds
+  timeout: 10000,          // Integer: Time between slide transitions, in milliseconds
+  pager: true,           // Boolean: Show pager, true or false
+  nav: false,             // Boolean: Show navigation, true or false
+  random: false,          // Boolean: Randomize the order of the slides, true or false
+  pause: true,           // Boolean: Pause on hover, true or false
+  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+  prevText: "Previous",   // String: Text for the "previous" button
+  nextText: "Next",       // String: Text for the "next" button
+  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+  manualControls: "",     // Selector: Declare custom pager navigation
+  namespace: "rslides",   // String: Change the default namespace used
+  before: function(){},   // Function: Before callback
+  after: function(){}     // Function: After callback
+});
+  });
+
+
+
+
+/*$(document).ready(function () {
+
+  
     // validate signup form on keyup and submit
-    var validator = $("#contactform").validate({
+    var validator = $("#webform-client-form-107").validate({
         rules: {
-            contactname: {
+            submitted[nom]: {
                 required: true,
                 minlength: 2
             },
-            email: {
+            submitted[e_mail]: {
                 required: true,
                 email: true
             },
-            subject: {
+            submitted[sujet]: {
                 required: true,
                 minlength: 2
             },
-            message: {
+            submitted[texte]: {
                 required: true,
                 minlength: 10
             }
         },
         messages: {
-            contactname: {
+            submitted[nom]: {
                 required: "Merci d'entrer votre nom",
                 minlength: jQuery.format("Votre nom doit faire au moins 2 caractères")
             },
-            email: {
+            submitted[e_mail]: {
                 required: "Merci d'entrer une adresse e-mail valide",
                 minlength: "Merci d'entrer une adresse e-mail valide"
             },
-            subject: {
+            submitted[sujet]: {
                 required: "Merci de préciser un sujet",
                 minlength: jQuery.format("Merci de préciser un sujet d'au moins 2 caractères")
             },
-            message: {
+            submitted[texte]: {
                 required: "Et un message! C'est mieux si vous souhaitez vraiment nous contacter :)",
                 minlength: jQuery.format("De plus de {0} caractères")
             }
@@ -82,12 +127,39 @@ $(document).ready(function () {
 
 
     });
-});*/
+});
+*/
+$(document).ready(function(){
+
+$(window).scroll(function () { 
+
+//Distance entre le footer et le dessus
+footertotop = ($('.footer').position().top);
+//Hauteur désirée en partant du bas
+scrolltop = $(document).scrollTop()+295;
+//Différence entre les valeurs calculées
+difference = scrolltop-footertotop;
+
+//Si il scroll plus bas, on met une hauteur négative
+
+if (scrolltop > footertotop) {
+
+$('.sbLeft').css('margin-top',  0-difference);
+}
+
+else  {
+$('.sbLeft').css('margin-top', 0);
+}
+
+
+});
+
+});
 
 $(document).ready(function () {
 
  var locations = [
-      ['Local de répétition', 50.544655,5.2272]
+      ['Local de répétition 40, rue des Grandes Ruelles 4520 Antheit', 50.544655,5.2272]
     ];
 
       // Create an array of styles.
@@ -153,4 +225,6 @@ $(document).ready(function () {
     }
 
 });
+
+
 });

@@ -25,9 +25,9 @@
  */
 ?>
 	<li>
-		<?php print render ($row->field_field_photo_mus); ?>
-		<p class="nomMusicienFiche"><?php print render ($row->node_title); ?></p>
-		<p class="pupitreMusicienFiche"><span><?php print render ($row->field_field_pupitre); ?></span> <?php print render ($row->field_field_instrument); ?></p>
+		<?php print ($fields['field_photo_mus']->content); ?>
+		<p class="nomMusicienFiche"><?php print ($fields['title']->raw); ?></p>
+	<p class="pupitreMusicienFiche"><?php print ($fields['field_instrument_pratique']->content); ?> <?php print ($fields['field_pupitre']->content); ?></p>
 		
 
 	</li>

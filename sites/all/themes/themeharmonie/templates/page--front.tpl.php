@@ -71,11 +71,13 @@
 ?>
 <header class="header" role="banner">
   <div class="wrap">
-     <h1 class="logoSite"><?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" width="270" height="97"/></a>
+    <div class="logoSite">
+     <h1><?php if ($logo): ?>
+        <a href="<?php print $front_page; ?>" title="Vers l'accueil du site" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="Harmonie d'Antheit" width="270" height="97"/></a>
         <?php endif; ?>
       </h1>
-
+      <p><?php print ($site_slogan); ?></p>
+    </div>
    <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation">
           <?php
@@ -89,7 +91,7 @@
               'class' => array('links', 'inline', 'clearfix','mainNav'),
             ),
             'heading' => array(
-              'text' => t('Main menu'),
+              'text' => t('Menu de navigation'),
               'level' => 'h2',
               'class' => array('element-invisible'),
             ),
@@ -111,7 +113,7 @@
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -120,7 +122,7 @@
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
-<!--       <?php print render($page['help']); ?> -->
+
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>

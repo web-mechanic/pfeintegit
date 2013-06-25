@@ -19,14 +19,14 @@
  * @ingroup views_templates
  */
 ?>
-<table>
+<table itemscope itemtype="http://schema.org/Event">
     <thead>
       <tr>
           <th class="dateCol">Date</th>
           <th class="nomCol">Nom de l'évènement</th>
           <th class="lieuCol">Lieu</th>
           <th class="pxCol">Prix</th>
-        
+     
       </tr>
     </thead>
 

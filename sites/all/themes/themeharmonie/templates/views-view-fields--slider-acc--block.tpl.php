@@ -20,12 +20,10 @@
  *   - $field->label_html: The full HTML of the label to use including
  *     configured element type.
  * - $row: The raw result object from the query, with all data it fetched.
- *
+ *<?php print render($row->field_field_imageslider);?>
  * @ingroup views_templates
  */
 ?>
-<div class="wrap">
-	<ul class="slider">
-		<li><?php print render($row->field_field_imageslider);?></li>
-	</ul>
-</div>
+
+<li><?php print ($fields['field_imageslider']->content);?></li>
+

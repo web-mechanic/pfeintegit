@@ -47,7 +47,7 @@
  * @see zen_process_block()
  */
 ?>
-<section class="agenda">
+<section class="agenda" itemscope itemtype="http://schema.org/Event">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <h2><?php print $title; ?></h2>

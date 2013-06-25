@@ -24,10 +24,10 @@
  * @ingroup views_templates
  */
 ?>
-<div class="postSummary">
-        <a href="singleBlog">
-       <h3><?php print render ($row->node_title); ?></h3>
+<div class="postSummary" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+ 
+       <h3 itemprop="name"><?php print ($fields['title']->content);?></h3>
         <?php print render ($row->field_field_image); ?>
-        <p class="chapoSummary"><?php print render ($row->field_field_summary_front); ?></p>
-        </a>
+        <p class="chapoSummary" itemprop="description"><?php print render ($row->field_field_summary_front); ?></p>
+
     </div>

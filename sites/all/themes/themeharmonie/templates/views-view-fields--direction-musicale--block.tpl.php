@@ -26,6 +26,6 @@
 ?>
 
 
-      <h3><?php print render ($row->node_title); ?></h3>
-          <?php print render ($row->field_field_photo); ?>
-        <p><?php print render ($row->field_field_content); ?></p>
+      <h3><?php print ($fields['title']->raw); ?></h3>
+         <?php print ($fields['field_photo']->content); ?>
+        <p><?php print ($fields['field_content']->content); ?></p>

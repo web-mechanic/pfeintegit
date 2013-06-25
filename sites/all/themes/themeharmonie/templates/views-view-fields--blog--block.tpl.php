@@ -25,14 +25,14 @@
  */
 ?>
 <li>
-	<article>
-	 <h3 class="artTitle"><?php print ($fields['title']->raw); ?></h3>
+	<article itemscope="" itemtype="http://schema.org/BlogPosting">
+	 <h3 class="artTitle" itemprop="name headline"><?php print ($fields['title']->content); ?></h3>
 		<ul class="postmetadata clearfix">   
-			<li class="date"><?php print ($fields['created']->content); ?></li>
+			<li class="date" itemprop="datePublished"><?php print ($fields['created']->content); ?></li>
 			<li class="tags"><?php print ($fields['field_tags']->content); ?></li>            
 		</ul>
-		<?php print ($fields['field_image']->content); ?>
-		<div class="artContent">
+		<div itemprop="image"><?php print ($fields['field_image']->content); ?></div>
+		<div class="artContent" itemprop="articleBody">
 			<p><?php print ($fields['body']->content); ?></p>
 		</div>
 	</article>

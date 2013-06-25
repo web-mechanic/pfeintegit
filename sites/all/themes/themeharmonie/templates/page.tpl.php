@@ -72,7 +72,7 @@
 <header class="header" role="banner">
   <div class="wrap">
      <h1 class="logoSite"><?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" width="270" height="97"/></a>
+        <a href="<?php print $front_page; ?>" title="Vers l'accueil du site" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="Site de la Royale Harmonie Concorde Saint-Martin d'Antheit" width="270" height="97"/></a>
         <?php endif; ?>
       </h1>
 
@@ -111,7 +111,7 @@
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>

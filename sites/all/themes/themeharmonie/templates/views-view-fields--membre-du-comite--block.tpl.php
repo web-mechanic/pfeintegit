@@ -26,9 +26,9 @@
 ?>
 
         <li class="gradeAdmin">
-            <a href="#">
+
             <h4> <?php print render ($row->field_field_role_1); ?></h4>  
-               <?php print render ($row->field_field_photo_comite); ?>
-            <p><?php print render ($row->node_title); ?></p> 
-            </a>
+            	<?php print ($fields['field_photo_comite']->content); ?>
+            <p><?php print ($fields['title']->raw); ?></p> 
+
         </li>

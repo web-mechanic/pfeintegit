@@ -24,11 +24,10 @@
  * @ingroup views_templates
  */
 ?>
- <div class="EventsContainer">
-        <a href="html/eventsPDetail.html">
-        <h3><?php print ($fields['title']->content); ?></h3>
+<div class="EventsContainer" itemprop="events" itemscope itemtype="http://schema.org/MusicEvent">
+	
+        <h3 itemprop="name"><?php print ($fields['title']->content); ?></h3>
         <?php print ($fields['field_photo_evenement']->content);?>
+        <p itemprop="startDate"><?php print ($fields['field_dates_evenement']->content);?></p>
 
-        <p class="dethEvents"> <?php print render($row->field_field_date_evenement);?></p>
-        </a>
-    </div>
+</div>

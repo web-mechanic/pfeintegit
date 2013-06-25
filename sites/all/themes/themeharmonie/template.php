@@ -250,7 +250,7 @@ function THEMENAME_menu_link(array $variables) {
 }
 
 
-
+/* Pour le webform */
 function themeharmonie_preprocess_webform_form(&$vars) {
   drupal_add_css(drupal_get_path('module', 'webform') . '/css/webform.css');
   drupal_add_js(drupal_get_path('module', 'webform') . '/js/webform.js');
@@ -269,10 +269,46 @@ function themeharmonie_preprocess_webform_form(&$vars) {
 }
 
 
+if (drupal_is_front_page()) {
+  $variables['title']="";
+  unset($variables['page']['content']['system_main']['default_message']);
+}
+
+/* Pour la Gmap */
 function hook_preprocess_page(&$vars) {
   drupal_add_js('//maps.google.com/maps/api/js?sensor=false', 'external');
   drupal_add_js('//maps.google.com/maps/api/js?sensor=false', array('type' => 'external'));
 }
 
+function themeharmonie_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+  $crumb_arrow = '<span class="crumbs-arrow"></span>';
+  if (!empty(
 
+  $breadcrumb)) {
+    $arr_crumbs = array();
+    array_push($arr_crumbs, '<span class="crumbs">' . implode($crumb_arrow, $breadcrumb) . '</span>');
+
+    $output = '';
+    $array_size = count($arr_crumbs);
+    for (
+
+$i=0; $i < $array_size; $i++) {
+      if ( $i == $array_size - 1 ) {
+      // Menu link title may override the content title
+        (menu_get_active_title()) ? $current_crumb = menu_get_active_title() : $current_crumb = drupal_get_title();
+      // If current page is 'Edit Page'
+      if (substr(drupal_get_title(), 0, 18) == '<em>Edit Page</em>') {
+          $current_crumb = 'Edit';
+        }
+
+        $output .= $arr_crumbs[$i] . '<span class="crumbs-current">' . $crumb_arrow . $current_crumb . '</span>';
+        break;
+      }
+      $output .= $arr_crumbs[$i];
+    }
+
+    return '<div class="breadcrumb">' . $output . '</div>';
+  }
+ }
 

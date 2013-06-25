@@ -47,7 +47,7 @@
  * @see zen_process_block()
  */
 ?>
-<section class="blogSummary">
+<section class="blogSummary" itemscope itemtype="http://schema.org/Blog">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <h2><?php print $title; ?></h2>

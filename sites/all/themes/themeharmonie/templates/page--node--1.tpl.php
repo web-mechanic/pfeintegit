@@ -72,7 +72,7 @@
 <header class="header" role="banner">
   <div class="wrap">
      <h1 class="logoSite"><?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" width="270" height="97"/></a>
+        <a href="<?php print $front_page; ?>" title="Vers l'accueil du site" rel="home" id="logo"><img class="logo" src="<?php print $logo; ?>" alt="Site de la Royale Harmonie Concorde Saint-Martin d'Antheit" width="270" height="97"/></a>
         <?php endif; ?>
       </h1>
 
@@ -111,7 +111,7 @@
     <section class="apropos">
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -156,7 +156,7 @@
     ?>
 
     <div class="sbLeft">
-      <?php print render ($page['content']['om_maximenu_om-maximenu-1']);?>
+      <?php print render ($page['content']['menu_menu-sb-a-propos']);?>
     </div>
 
     <div class="sbRight">
@@ -165,36 +165,40 @@
       <?php print render ($page['content']['views_membre_du_comite-block']);?>
     <section class="lesMusiciens" id="musiciens">
       <div class="musPart">
-            <h2>Les musiciens</h2>
+            <h3>Les musiciens</h3>
       <div class="half">
-        <ul>
+
+        <?php print render ($page['content']['views_hautbois-block']);?>
+
         <?php print render ($page['content']['views_flute-block']);?>
-        </ul>
-        <ul>
+
+
         <?php print render ($page['content']['views_clarinette-block']);?>
-        </ul>
-        <ul>
+
+
         <?php print render ($page['content']['views_saxophone-block']);?>
-        </ul>
+
       </div>
 
       <div class="half">
 
-        <ul>
+
         <?php print render ($page['content']['views_trompette-block']);?>
-        </ul>
-        <ul>
+
+  
         <?php print render ($page['content']['views_trombonne-block']);?>
-        </ul>
-        <ul>
+   
+
         <?php print render ($page['content']['views_tuba_euphonium-block']);?>
-        </ul>
-        <ul>
+
+
         <?php print render ($page['content']['views_violoncelle-block']);?>
-        </ul>
-        <ul>
+
         <?php print render ($page['content']['views_synth_-block']);?>
-        </ul>
+
+
+        
+
         <ul>
         <?php print render ($page['content']['views_percussion-block']);?>
         </ul>
@@ -212,7 +216,7 @@
     <?php endif; ?>
 </section>
 
-<a class="toTop">Retour au dessus</a>
+<a class="toTop" title="Retour au dessus de la page">Retour au dessus</a>
   </div><!-- /#main -->
 
   <?php print render($page['footer']); ?>
